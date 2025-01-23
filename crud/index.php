@@ -30,7 +30,10 @@
                 <td><?php echo $data["nama"] ?></td>
                 <td><?php echo $data["kelas"] ?></td>
                 <td><?php echo $data["jeniskelamin"] ?></td>
-                <td>ubah | hapus</td>
+                <td>
+                    <a href="edit.php?nis=<?php echo $data["nis"] ?>">Edit</a>
+                    <a href="proses/delete.php?nis=<?php echo $data["nis"] ?>">Delete</a>
+                </td>
             </tr>
         <?php
         }

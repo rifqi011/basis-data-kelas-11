@@ -7,8 +7,8 @@ $kelas = $_POST["kelas"];
 $jeniskelamin = $_POST["jeniskelamin"];
 
 if ($nis != null && $nama != null && $kelas != null && $jeniskelamin != null) {
-    $input = "INSERT INTO siswa (nis, nama, kelas, jeniskelamin) VALUES ('$nis', '$nama', '$kelas', '$jeniskelamin')";
-    $run = mysqli_query($connect, $input);
+    $edit = "UPDATE siswa SET nama='$nama', kelas='$kelas', jeniskelamin='$jeniskelamin' WHERE nis = '$nis'";
+    $run = mysqli_query($connect, $edit);
 }
 
 header("Location: ../");
