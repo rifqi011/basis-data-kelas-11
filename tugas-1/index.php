@@ -44,7 +44,7 @@
                 <tbody>
                     <?php
                     $no = 1;
-                    $query = mysqli_query($connect, "SELECT * FROM buku_rifqi");
+                    $query = mysqli_query($connect, "SELECT * FROM buku_rifqi WHERE active = 1");
 
                     while ($data = mysqli_fetch_array($query)) {
                     ?>
@@ -64,7 +64,7 @@
                             <td class="px-6 py-4 space-x-3 text-right">
                                 <a href="details.php" class="font-medium text-white-600 hover:underline">Details</a>
                                 <a href="edit.php?id=<?= $data['id'] ?>" class="font-medium text-blue-600 hover:underline">Edit</a>
-                                <a href="#" class="font-medium text-red-600 hover:underline">Delete</a>
+                                <a href="#" onclick="confirmDelete(<?= $data['id'] ?>)" class="font-medium text-red-600 pointer hover:underline">Delete</a>
                             </td>
                         </tr>
                     <?php
@@ -74,6 +74,14 @@
             </table>
         </div>
     </div>
+
+    <script>
+        function confirmDelete(id) {
+            if (confirm("Apakah anda yakin ingin menghapus data ini?")) {
+                window.location.href = "proses/prosesdelete.php?id=" + id
+            }
+        }
+    </script>
 </body>
 
 </html>
