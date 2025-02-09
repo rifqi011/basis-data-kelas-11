@@ -22,7 +22,7 @@
 
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left text-gray-400">
-                <thead class="text-xs uppercase bg-gray-600 text-gray-200">
+                <thead class="text-xs uppercase bg-gray-800 text-gray-200">
                     <tr>
                         <th scope="col" class="px-6 py-3">
                             No
@@ -48,7 +48,7 @@
 
                     while ($data = mysqli_fetch_array($query)) {
                     ?>
-                        <tr class="text-white border-b bg-gray-800 border-gray-700 hover:bg-gray-700">
+                        <tr class="text-white border-b border-gray-700 <?= $no % 2 == 1 ? "bg-gray-700 hover:bg-gray-500" : "bg-gray-600 hover:bg-gray-400"?>">
                             <td class="px-6 py-4">
                                 <?= $no++ ?>
                             </td>
