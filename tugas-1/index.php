@@ -75,11 +75,31 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function confirmDelete(id) {
-            if (confirm("Apakah anda yakin ingin menghapus data ini?")) {
-                window.location.href = "proses/prosesdelete.php?id=" + id
-            }
+            Swal.fire({
+                title: "Apakah anda yakin?",
+                text: "Data akan dihapus",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Ya, hapus!",
+                cancelButtonText: "Tidak",
+                allowOutsideClick: false,
+                escapeKey: false,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Berhasil!",
+                        text: "Data berhasil dihapus.",
+                        icon: "success"
+                    }).then(() => {
+                        window.location.href = "proses/prosesdelete.php?id=" + id
+                    })
+                }
+            });
         }
     </script>
 </body>
