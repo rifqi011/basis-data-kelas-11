@@ -30,25 +30,25 @@
             <form action="proses/prosesedit.php" method="post" class="rounded-lg">
                 <div class="mb-5">
                     <label for="judul" class="block mb-2 text-sm font-medium text-gray-900">Judul</label>
-                    <input type="judul" id="judul" name="judul" value="<?= $data['judul'] ?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none" placeholder="Masukan Judul" required />
+                    <input type="text" id="judul" name="judul" value="<?= $data['judul'] ?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none" placeholder="Masukan Judul" required />
                 </div>
 
                 <div class="mb-5 flex justify-between gap-5">
                     <div class="flex-1">
                         <label for="penulis" class="block mb-2 text-sm font-medium text-gray-900">Penulis</label>
-                        <input type="penulis" id="penulis" name="penulis" value="<?= $data['penulis'] ?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none" placeholder="Masukan Penulis" required />
+                        <input type="text" id="penulis" name="penulis" value="<?= $data['penulis'] ?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none" placeholder="Masukan Penulis" required />
                     </div>
 
                     <div class="flex-1">
                         <label for="penerbit" class="block mb-2 text-sm font-medium text-gray-900">Penerbit</label>
-                        <input type="penerbit" id="penerbit" name="penerbit" value="<?= $data['penerbit'] ?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none" placeholder="Masukan Penerbit" required />
+                        <input type="text" id="penerbit" name="penerbit" value="<?= $data['penerbit'] ?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none" placeholder="Masukan Penerbit" required />
                     </div>
                 </div>
 
                 <div class="mb-5 flex justify-between gap-5">
                     <div class="flex-1">
                         <label for="tahun" class="block mb-2 text-sm font-medium text-gray-900">Tahun</label>
-                        <input type="tahun" id="tahun" name="tahun" min="1800" max="2025" value="<?= $data['tahun'] ?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none" placeholder="Masukan Tahun" required />
+                        <input type="number" id="tahun" name="tahun" min="1800" max="2025" value="<?= $data['tahun'] ?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none" placeholder="Masukan Tahun" required />
                     </div>
 
                     <div class="flex-1">
